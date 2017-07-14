@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Edit Animal Info</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id='wrapper'>
+            <hr>
+            <h3>Edit animal Info</h3>
+            <hr>
+            <br>
+            <form id="editform" action="/animal/<%=animaledit._id%>" method="POST">
+                <p><strong>Existing Name: </strong><%= animaledit.name %></p>
+                <br>
+                <label for="editname">Edit Name:</label><br>
+                <input type="text" name="editname" id="editname" value="<%= animaledit.name %>">
+                <br><br>
+                <p><strong>Existing Description: </strong> <%= animaledit.description %></p><br>
+                <label for="editdescription">Edit Description:</label><br>
+                <textarea cols="90" rows="10" name="editdescription" id="editdescription"><%= animaledit.description %></textarea>
+                <br><br>
+                <input type="submit" name="submitedit" value="Submit Edit">
+            </form>
+        </div>
+    </body>
+</html>

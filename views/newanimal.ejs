@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Create an Animal</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Create an animal</h3>
+            <form id="createanimal" action='/animal' method='POST'>
+                <label for="animalname">Animal Name</label>
+                <input type="text" name="animalname" value=""><br><br>
+                <label for="animaldescription">Description</label><br>
+                <textarea name='animaldescription' rows="5" cols="50"></textarea><br><br>
+
+                <select id="animaltype" name="animaltype">
+                    <option value="Dog">Dog</option>
+                    <option value="Snake">Snake</option>
+                    <option value="Panda">Panda</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="submit" name="submit" value="Create Animal">
+            </form>
+        </div>
+    </body>
+</html>

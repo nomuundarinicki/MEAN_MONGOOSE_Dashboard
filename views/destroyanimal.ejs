@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Edit Animal Info</title>
+        <meta description='Edit animal Info Page, info on one animal'
+        <meta charset='utf-8'/>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <hr>
+            <h3>Destroy Animal Info</h3>
+            <hr>
+            <br>
+            <form id="editform" action="/animal/<%=animaledit._id%>" method="POST">
+                <p><strong>Existing Name: </strong><%= animaldestroy.name %></p>
+                <br>
+                <label for="editname">Edit Name:</label>
+                <input type="text" name="editname" id="editname" value="<%= animaledit.name %>">
+                <br><br>
+                <p><strong>Existing Description: </strong> <%= animaldestroy.description %></p><br>
+                <label for="editdescription">Edit Description:</label>
+                <textarea cols="90" rows="10" name="editdescription" id="editdescription"><%= animaldestroy.description %></textarea>
+                <br><br>
+                <input type="submit" name="submitdestroy" value="Submit Edit">
+            </form>
+        </div>
+    </body>
+</html>

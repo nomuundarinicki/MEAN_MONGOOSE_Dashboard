@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Animal Dashboard</title>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Animal Tracker</h3>
+            <h4>This is where you will see all the Animals</h4>
+            <form id='createanimal' action='/animal/new' method='GET'>
+                <input type="submit" name="submit" value="Create an Animal">
+            </form>
+            <br>
+            <hr>
+            <br>
+            <h4>Animals</h4>
+            <h6>click the animal name to view/edit animals</h6>
+            <br>
+            <% if(animals.length > 0) { %>
+                <% for(let i = 0; i < animals.length; i++){ %>
+                    <p><strong>Name: </strong><a href="/animal/<%=animals[i]._id%>"><%= animals[i].name %></a></p>
+                    <p><strong>Description: </strong> <%= animals[i].description %></p>
+                    <p><strong>Type: </strong> <%= animals[i].type %></p>
+                    <hr>
+                <% } %>
+            <% } else { %>
+                <p>There are no animals yet, create one!</p>
+            <% } %>
+        </div>
+    </body>
+</html>

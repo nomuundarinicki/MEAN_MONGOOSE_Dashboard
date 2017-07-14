@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Animal Info</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Animal info</h3>
+            <form id='gohome' action='/' method='GET'>
+                <input type="submit" name="gohome" value="Go Home">
+            </form>
+            <form id='creatanimal' action='/animal/new' method='GET'>
+                <input type="submit" name="createanimal" value="Create an animal">
+            </form>
+            <form id='editthisanimal' action='/animal/edit/<%=animal._id%>' method='GET'>
+                <input type="submit" name="editanimal" value="Edit this Animal">
+            </form>
+            <form id='destroythianimal' action='/animal/destroy/<%=animal._id%>' method='GET'>
+                <input type="submit" name="destroyanimal" value="Destroy this Animal record">
+            </form>
+            <h6> You will delete it completely </h6>
+            <br>
+            <hr>
+            <br>
+            <h4>Animal Info</h4>
+            <hr>
+            <br>
+            <p><strong>Name: </strong><%= animal.name %></p>
+            <p><strong>Description: </strong> <%= animal.description %></p>
+            <p><strong>Type: </strong> <%= animal.type %></p>
+        </div>
+    </body>
+</html>
